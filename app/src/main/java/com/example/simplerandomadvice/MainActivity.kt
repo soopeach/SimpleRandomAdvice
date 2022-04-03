@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         val retrofit = RetrofitClient.getClient()
             .create(AdviceService::class.java)
 
-
         binding.btnChange.setOnClickListener {
             retrofit.getAdvice()
                 .enqueue(object : Callback<Advice> {
